@@ -26,6 +26,9 @@ contract CedulaVotacao {
     /** 
      * @dev Cria uma nova CedulaVotacao to choose one of 'OpcoesVotoNomes'.
      * @param OpcoesVotoNomes OpcoesVotos
+	 * Atenção: O compilador Solidity exige uma string no formato Bytes32[] 
+	 * para gerar essa string Bytes32[] pode-se utilizar o seguinte site e completar com zeros à direita: https://web3-type-converter.onbrn.com/
+	 * ["0x53494d0000000000000000000000000000000000000000000000000000000000","0x4e414f0000000000000000000000000000000000000000000000000000000000"]
      */
     constructor(bytes32[] memory OpcoesVotoNomes) {
         for (uint i = 0; i < OpcoesVotoNomes.length; i++) {
